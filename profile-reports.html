@@ -1,0 +1,270 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+	<title>Profile Reports</title>
+	<link rel="stylesheet" type="text/css" href="css/design.css">
+	<link rel="stylesheet" type="text/css" href="css/profile-reports.css">
+</head>
+
+<body>
+	<div class="grid-container">
+		<div class="top-nav">
+			<div class="lside">
+				<img src="https://www.msuiit.edu.ph/assets/img/xseal-02.png.pagespeed.ic.qUG0OeB0eB.png" class="iitlogo">
+				<input type="text" id="user-search" class="search" placeholder="Search" name="search">
+			</div>
+			<div class="rside">
+				<div class="n-dropdown">
+					<div onclick="bellDD()" id="bell" class="notif-circle"></div>
+					<div id="notif-dd" class="notif-content">
+					    <a id="prof-rep-notif" href="#">
+					    	<p class="n-head">Profile Report!</p>
+					    	<p class="n-name">Accused: <span>Quisie Caporte</span></p>
+					    </a>
+						<a id="posts-rep-notif" href="#">
+					    	<p class="n-head">Posts Report!</p>
+					    	<p class="n-name">Accused: <span>Quisie Caporte</span></p>
+					    </a>
+					    <a id="comms-rep-notif" href="#">
+					    	<p class="n-head">Comments Report!</p>
+					    	<p class="n-name">Accused: <span>Quisie Caporte</span></p>
+					    </a>
+					</div>
+				</div>
+				<div class="s-dropdown">
+					<div onclick="settingsDD()" id="settings" class="dd-circle"></div>
+					<div id="settings-dd" class="dd-content">
+						<a href="#" class="">
+							<p class="dd">
+								Settings
+							</p>
+						</a>
+						<a href="#" class="">
+							<p class="dd" style="font-weight: 600;">
+								Signout
+							</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="nav-grid">
+            <ul class="nav">
+                <li class="nav-dir">
+                    <a href="overview.html">
+                        <img src="icons/home.png" alt="home-icon" draggable="false" (dragstart)="false;">
+                        <span class="o-c">Overview</span>
+                    </a>
+                </li>
+                <li class="nav-dir">
+                    <a href="registration.html">
+                        <img src="icons/userW.png" alt="user-icon" draggable="false" (dragstart)="false;">
+                        <span class="o-c">Registration Requests</span>
+                    </a>
+                </li>
+                <li class="nav-dir">
+                    <a href="community-creation.html">
+                        <img src="icons/communityW.png" alt="community-icon" draggable="false" (dragstart)="false;">
+                        <span class="o-c">Community Creation Requests</span>
+                    </a>
+                </li>
+                <li class="nav-dir" style="background-color: #1D2230;">
+                    <a href="profile-reports.html">
+                        <img src="icons/userReportW.png" alt="user-report-icon" class="nav-rect" draggable="false" (dragstart)="false;">
+                        <span class="p-c">Profile Reports</span>
+                    </a>
+                </li>
+                <li class="nav-dir">
+                    <a href="post-reports.html">
+                        <img src="icons/postsReportW.png" alt="posts-reports-icon" class="nav-rect" draggable="false" (dragstart)="false;">
+                        <span class="p-c">Posts Reports</span>
+                    </a>
+                </li>
+                <li class="nav-dir">
+                    <a href="comment-reports.html">
+                        <img src="icons/commentsReportW.png" alt="comms-reports-icon" class="nav-rect" draggable="false" (dragstart)="false;">
+                        <span class="p-c">Comments Reports</span>
+                    </a>
+                </li>
+            </ul>
+		</div>
+
+		<div class="content-grid-r wrap">
+			<header class="title-search">
+				<div class="rs-cont">
+					<p class="page-title-r">Profile Reports</p>
+					<div class="search-div">
+						<input type="text" id="search-bg" class="prof-search" placeholder="Search" name="search">
+					</div>
+				</div>
+				<div class="content-title">
+					<p class="idT">ID</p>
+					<p class="nameT">Name</p>	
+					<p class="offenseT">Offense</p>	
+					<p class="countT">Count</p>	
+					<p class="actionT">Action</p>	
+				</div>
+			</header>
+			<main class="content-main">
+				<div class="content">
+					<p class="id" id="rep-user-id">2019-0001</p>
+					<a href="#" target="_blank" class="name" id="rep-user-name">Rumil Christian Blaire M. Mendoza</a>
+					<p class="offense" id="rep-user-off">Pretending to Be Someone</p>
+					<p class="count" id="rep-user-count">5</p>
+					<div class="action">
+						<button id="kick-btn">Kick</button>
+						<button id="warn-btn">Warn</button>
+						<button id="ignore-btn">Ignore</button>
+					</div>
+				</div>
+				<div class="content">
+					<p class="id" id="rep-user-id">2019-0002</p>
+					<a href="#" target="_blank" class="name" id="rep-user-name">Joseph Junior G. Cabal</a>
+					<p class="offense" id="rep-user-off">Posting Inappropriate Things</p>
+					<p class="count" id="rep-user-count">10</p>
+					<div class="action">
+						<button id="kick-btn">Kick</button>
+						<button id="warn-btn">Warn</button>
+						<button id="ignore-btn">Ignore</button>
+					</div>
+				</div>
+				<div class="content">
+					<p class="id" id="rep-user-id">2019-0003</p>
+					<a href="#" target="_blank" class="name" id="rep-user-name">Gabriel Lawrence D. Paylaga</a>
+					<p class="offense" id="rep-user-off">Harassment or Bullying</p>
+					<p class="count" id="rep-user-count">23</p>
+					<div class="action">
+						<button id="kick-btn">Kick</button>
+						<button id="warn-btn">Warn</button>
+						<button id="ignore-btn">Ignore</button>
+					</div>
+				</div>
+				<div class="content">
+					<p class="id" id="rep-user-id">2019-0004</p>
+					<a href="#" target="_blank" class="name" id="rep-user-name">Kc Caporte</a>
+					<p class="offense" id="rep-user-off">Not an Authentic Name</p>
+					<p class="count" id="rep-user-count">15</p>
+					<div class="action">
+						<button id="kick-btn">Kick</button>
+						<button id="warn-btn">Warn</button>
+						<button id="ignore-btn">Ignore</button>
+					</div>
+				</div>
+				<div class="content">
+					<p class="id" id="rep-user-id">2019-0004</p>
+					<a href="#" target="_blank" class="name" id="rep-user-name">Kc Caporte</a>
+					<p class="offense" id="rep-user-off">Not an Authentic Name</p>
+					<p class="count" id="rep-user-count">15</p>
+					<div class="action">
+						<button id="kick-btn">Kick</button>
+						<button id="warn-btn">Warn</button>
+						<button id="ignore-btn">Ignore</button>
+					</div>
+				</div>
+				<div class="content">
+					<p class="id" id="rep-user-id">2019-0004</p>
+					<a href="#" target="_blank" class="name" id="rep-user-name">Kc Caporte</a>
+					<p class="offense" id="rep-user-off">Not an Authentic Name</p>
+					<p class="count" id="rep-user-count">15</p>
+					<div class="action">
+						<button id="kick-btn">Kick</button>
+						<button id="warn-btn">Warn</button>
+						<button id="ignore-btn">Ignore</button>
+					</div>
+				</div>
+				<div class="content">
+					<p class="id" id="rep-user-id">2019-0004</p>
+					<a href="#" target="_blank" class="name" id="rep-user-name">Kc Caporte</a>
+					<p class="offense" id="rep-user-off">Not an Authentic Name</p>
+					<p class="count" id="rep-user-count">15</p>
+					<div class="action">
+						<button id="kick-btn">Kick</button>
+						<button id="warn-btn">Warn</button>
+						<button id="ignore-btn">Ignore</button>
+					</div>
+				</div>
+				<div class="content">
+					<p class="id" id="rep-user-id">2019-0004</p>
+					<a href="#" target="_blank" class="name" id="rep-user-name">Kc Caporte</a>
+					<p class="offense" id="rep-user-off">Not an Authentic Name</p>
+					<p class="count" id="rep-user-count">15</p>
+					<div class="action">
+						<button id="kick-btn">Kick</button>
+						<button id="warn-btn">Warn</button>
+						<button id="ignore-btn">Ignore</button>
+					</div>
+				</div>
+				<div class="content">
+					<p class="id" id="rep-user-id">2019-0004</p>
+					<a href="#" target="_blank" class="name" id="rep-user-name">Kc Caporte</a>
+					<p class="offense" id="rep-user-off">Not an Authentic Name</p>
+					<p class="count" id="rep-user-count">15</p>
+					<div class="action">
+						<button id="kick-btn">Kick</button>
+						<button id="warn-btn">Warn</button>
+						<button id="ignore-btn">Ignore</button>
+					</div>
+				</div>
+				<div class="content">
+					<p class="id" id="rep-user-id">2019-0004</p>
+					<a href="#" target="_blank" class="name" id="rep-user-name">Kc Caporte</a>
+					<p class="offense" id="rep-user-off">Not an Authentic Name</p>
+					<p class="count" id="rep-user-count">15</p>
+					<div class="action">
+						<button id="kick-btn">Kick</button>
+						<button id="warn-btn">Warn</button>
+						<button id="ignore-btn">Ignore</button>
+					</div>
+				</div>
+				<div class="content">
+					<p class="id" id="rep-user-id">2019-0004</p>
+					<a href="#" target="_blank" class="name" id="rep-user-name">Kc Caporte</a>
+					<p class="offense" id="rep-user-off">Not an Authentic Name</p>
+					<p class="count" id="rep-user-count">15</p>
+					<div class="action">
+						<button id="kick-btn">Kick</button>
+						<button id="warn-btn">Warn</button>
+						<button id="ignore-btn">Ignore</button>
+					</div>
+				</div>
+				<div class="content">
+					<p class="id" id="rep-user-id">2019-0004</p>
+					<a href="#" target="_blank" class="name" id="rep-user-name">Kc Caporte</a>
+					<p class="offense" id="rep-user-off">Not an Authentic Name</p>
+					<p class="count" id="rep-user-count">15</p>
+					<div class="action">
+						<button id="kick-btn">Kick</button>
+						<button id="warn-btn">Warn</button>
+						<button id="ignore-btn">Ignore</button>
+					</div>
+				</div>
+				<div class="content">
+					<p class="id" id="rep-user-id">2019-0004</p>
+					<a href="#" target="_blank" class="name" id="rep-user-name">Kc Caporte</a>
+					<p class="offense" id="rep-user-off">Not an Authentic Name</p>
+					<p class="count" id="rep-user-count">15</p>
+					<div class="action">
+						<button id="kick-btn">Kick</button>
+						<button id="warn-btn">Warn</button>
+						<button id="ignore-btn">Ignore</button>
+					</div>
+				</div>
+				<div class="content">
+					<p class="id" id="rep-user-id">2019-0004</p>
+					<a href="#" target="_blank" class="name" id="rep-user-name">Kc Caporte</a>
+					<p class="offense" id="rep-user-off">Not an Authentic Name</p>
+					<p class="count" id="rep-user-count">15</p>
+					<div class="action">
+						<button id="kick-btn">Kick</button>
+						<button id="warn-btn">Warn</button>
+						<button id="ignore-btn">Ignore</button>
+					</div>
+				</div>
+			</main>
+		</div>
+	</div>
+
+	<script src="script/univ-script.js"></script>
+</body>
+</html>

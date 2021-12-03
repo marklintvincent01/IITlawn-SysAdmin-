@@ -1,0 +1,155 @@
+.content-grid-r {
+	grid-area: content;
+	display: grid;
+  	height: 90vh;
+  	margin: 0 3% 0 3%;
+  	grid-template-columns: 1fr;
+  	grid-template-rows: auto 1fr;
+  	grid-template-areas: 
+    	'header'
+    	'main';
+}
+.content-grid-r > header {
+  grid-area: header;
+  font-family: 'Roboto', sans-serif;
+}
+
+.content-grid-r > main {
+  grid-area: main;
+  overflow: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+.content-grid-r > main::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+.page-title-r {
+	font-size: 50px;
+	font-weight: bolder;
+	font-kerning: auto;
+	font-family: 'Roboto', sans-serif;
+	margin-bottom: 10px;
+
+}
+.title-search {
+	display: flex;
+	flex-direction: column;
+}
+.rs-cont {
+	display: flex;
+	justify-content: space-between;
+}
+.search-div {
+	display: flex;
+	align-items: center;
+}
+.u-search {
+	display: block;
+  	margin: 15px auto;
+  	font-family: 'Roboto', sans-serif;
+  	outline: none;
+  	font-size: 20px;
+  	color: black;
+  	border: none;
+  	background: transparent;
+  	border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+  	padding: 10px;
+  	padding-left: 40px;
+}
+#search-bg {
+  background-image: url('../icons/magni.png');
+  background-repeat: no-repeat; 
+  background-position: 2px 10px;
+  background-size: 25px;
+  opacity: 0.5;
+  margin: 50px 50px 0 0;
+}
+.content-title {
+	display: grid;
+	grid-template-columns: 15fr 30fr 40fr 15fr;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bolder;
+	font-size: 32px;
+	grid-template-areas:
+		"idTT nameTT emailTT actionTT";
+}
+/*
+.content-title p {
+	margin-bottom: 20px;
+}
+.idTT {
+	grid-area: idT;
+	margin-left: 10%;
+}
+.nameTT {
+	grid-area: nameT;
+}
+.emailTT {
+	grid-area: emailT;
+}
+.actionTT {
+	grid-area: actionT;
+	margin-left: 15px;
+}
+*/
+
+.content {
+	display: grid;
+	grid-template-columns: 15fr 30fr 36fr 20fr;
+	background-color: #ffffff;
+	border-radius: 20px;
+	box-shadow: 1px 3px 5px #cfcfcf;
+	height: auto;
+	margin: 0 5px 12px 0;
+	justify-self: start;
+	position: relative;
+	font-size: 20px;
+	grid-template-areas:
+		"id name email action";
+}
+.content p {
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+.id {
+	grid-area: id;
+	margin-left: 10%;
+}
+.name {
+	grid-area: name;
+	margin-left: 3px;
+}
+.email {
+	grid-area: email;
+	margin-left: 9px;
+}
+
+#accept-btn, #reject-btn {
+	padding: 0;
+	width: 90px;
+	height: 40px;
+	border: none;
+	font-size: 15px;
+	border-radius: 30px;
+	cursor: pointer;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bolder;
+	color: #ffffff;
+}
+#accept-btn:hover, #reject-btn:hover {
+	background-color: rgba(125, 125, 125, 0.5);
+}
+
+#accept-btn {
+  background-color: #11D100;
+}
+#reject-btn {
+  background-color: #F3BE00;
+}
+
+
+
+
+
+
